@@ -1,0 +1,35 @@
+1) what is Singleton class?
+Ans: A class which should have Only one instance always exist at max.
+Advantages:
+
+  1) Reusability of the exiting object that save memory and time of create repeated object.
+  2) Easy to implement
+  3) No need to pass object to different method as it globally available.
+  4)Resources like database connections, configuration settings, or caches are managed from a single place.
+
+Disadvantages:
+   1) It breaks SRP(SOLID) since pure singleton class always implement inside Business logic class. Hence every business class have by default 2 responsiblites one
+      is create singleton object and another implement their own business logic.
+   2) Can not do unit test for singleton class.
+   3) Simple implementation of singleton class is not sufficient to prevent thread safe.
+   4) Hidden global dependency that make its tightly coupled.
+Where to use:
+    1) Logger
+    2) Configuration
+    3) DB connection
+    4) Utility class
+    5) Session management
+How to implement :
+
+    1) static private variable
+    2) private constructor
+    3) static public method which return  static final objects.
+
+  Tread safe:
+     1) lazy initialization
+     2) Eager initialization
+     3) Double check
+     4) Bill pugh
+     5) synchronized
+
+

@@ -1,0 +1,29 @@
+What is Factory Design Pattern?
+Factory Design Pattern is a creational design pattern that encapsulates object creation logic. Based on the input (such as a string, enum, or configuration),
+the factory returns an instance of the appropriate class that implements a common interface or extends a common base class.
+Advantage:
+1) It encapsulate object creation logic.
+2)Reduce tight coupling between client and implementation classes.
+3) Easy add to new object type.
+4) Improves maintainability.
+5) Follow OPEN/CLOSED principle using appropriate implementation.
+
+Disadvantage:
+
+1) violate OPEN/CLOSED principle with simple implementation
+2) Slight performance overhead.
+3) More classes required as it grows and complex to manage it.
+
+
+How to implement it ?
+
+Simple Implementation :
+
+  1) Create Factory class
+     a) create class with public static method which return Notification object ( which may have different class object implements Notification class)
+     b) If inputString == mainString then create new object of class and return it.
+  2) Create interface class with generic method.
+  3) create multiple class which implement Interface class. Also implement abstract method with own implementation.
+  4) In main ,  create Interface class object by assigning Factory class method with desired input string to create new object.
+  5) Now call generic method of interface by desired class object.
+
